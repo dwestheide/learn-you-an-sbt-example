@@ -14,6 +14,12 @@ object WebApi extends Plan {
       case _ =>
         MethodNotAllowed
     }
+    case req @ Path("equipment") => req match {
+      case GET(_) =>
+        ResponseString("the list of equipment we have on offer")
+      case _ =>
+        MethodNotAllowed
+    }
     case req => req match {
       case GET(_) =>
         TeaPot ~> ResponseString("COME BACK LATER WHEN THE COFFEE IS READY!")
