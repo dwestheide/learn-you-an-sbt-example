@@ -31,6 +31,7 @@ lazy val root = project
     libraryDependencies ++= Seq(unfilteredJetty))
   .dependsOn(web)
   .aggregate(application, web)
+  .settings(Revolver.settings: _*)
 
 organization in ThisBuild := "com.hipstercoffee"
 
