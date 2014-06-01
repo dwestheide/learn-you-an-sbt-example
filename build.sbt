@@ -32,7 +32,7 @@ lazy val root = project
     libraryDependencies ++= Seq(unfilteredJetty))
   .dependsOn(web)
   .aggregate(application, web)
-  .settings(ReleaseNotes.releaseNotesSettings: _*)
+  .enablePlugins(releasenotes.ReleaseNotesPlugin)
 
 organization in ThisBuild := "com.hipstercoffee"
 
