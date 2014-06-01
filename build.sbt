@@ -28,6 +28,7 @@ lazy val root = project
   .in(file("."))
   .settings(
     normalizedName := baseName,
+    name := "Hipster Coffee Shop",
     libraryDependencies ++= Seq(unfilteredJetty))
   .dependsOn(web)
   .aggregate(application, web)
