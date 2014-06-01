@@ -1,1 +1,1 @@
-addSbtPlugin("com.hipstercoffee" % "sbt-release-notes" % "0.1.0")
+addSbtPlugin("com.hipstercoffee" % "sbt-release-notes" % "0.1.0-d6235c466985532f488282cd0c278b73650a89a3")
