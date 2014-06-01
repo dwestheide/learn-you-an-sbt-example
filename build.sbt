@@ -33,6 +33,8 @@ lazy val root = project
   .aggregate(application, web)
   .settings(Revolver.settings: _*)
 
+showCurrentGitBranch
+
 organization in ThisBuild := "com.hipstercoffee"
 
 version in ThisBuild := "0.4.1-SNAPSHOT"
