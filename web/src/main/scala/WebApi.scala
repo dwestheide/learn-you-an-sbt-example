@@ -8,6 +8,7 @@ import unfiltered.filter.Plan.Intent
 
 object WebApi extends Plan {
   override def intent = {
-    case _ => TeaPot ~> ResponseString("Come back later when the coffee is ready")
+    case _ =>
+      TeaPot ~> ResponseString("COME BACK LATER WHEN THE COFFEE IS READY!")
   }
 }
