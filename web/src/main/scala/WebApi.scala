@@ -8,6 +8,12 @@ import unfiltered.filter.Plan.Intent
 
 object WebApi extends Plan {
   override def intent = {
+    case req @ Path("beans") => req match {
+      case GET(_) =>
+        Ok ~> ResponseString("the list of beans we have on offer")
+      case _ =>
+        MethodNotAllowed
+    }
     case req => req match {
       case GET(_) =>
         TeaPot ~> ResponseString("COME BACK LATER WHEN THE COFFEE IS READY!")
