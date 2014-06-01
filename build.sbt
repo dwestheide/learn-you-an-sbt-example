@@ -1,5 +1,4 @@
 import Dependencies._
-import releasenotes.ReleaseNotes
 
 lazy val baseName = "hipster-coffee-shop"
 
@@ -32,7 +31,6 @@ lazy val root = project
     libraryDependencies ++= Seq(unfilteredJetty))
   .dependsOn(web)
   .aggregate(application, web)
-  .enablePlugins(releasenotes.ReleaseNotesPlugin)
 
 organization in ThisBuild := "com.hipstercoffee"
 
