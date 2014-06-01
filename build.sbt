@@ -1,7 +1,11 @@
 import Dependencies._
+import releasenotes.ReleaseNotes
+
+lazy val baseName = "hipster-coffee-shop"
 
 lazy val application = project
   .settings(
+    normalizedName := s"$baseName-${normalizedName.value}",
     libraryDependencies ++= Seq(
       scalazCore,
       jodaTime,
@@ -12,6 +16,7 @@ lazy val application = project
 lazy val web = project
   .dependsOn(application)
   .settings(
+    normalizedName := s"$baseName-${normalizedName.value}",
     libraryDependencies ++= Seq(
       scalazCore,
       unfilteredFilter,
@@ -22,9 +27,11 @@ lazy val web = project
 lazy val root = project
   .in(file("."))
   .settings(
+    normalizedName := baseName,
     libraryDependencies ++= Seq(unfilteredJetty))
   .dependsOn(web)
   .aggregate(application, web)
+  .settings(ReleaseNotes.releaseNotesSettings: _*)
 
 organization in ThisBuild := "com.hipstercoffee"
 
