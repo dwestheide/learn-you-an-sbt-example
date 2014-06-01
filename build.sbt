@@ -1,5 +1,13 @@
 import Dependencies._
 
+import com.typesafe.sbt.SbtGit._
+
+versionWithGit
+
+showCurrentGitBranch
+
+git.baseVersion := "0.5.0"
+
 lazy val baseName = "hipster-coffee-shop"
 
 lazy val application = project
@@ -33,10 +41,6 @@ lazy val root = project
   .aggregate(application, web)
   .settings(Revolver.settings: _*)
 
-showCurrentGitBranch
-
 organization in ThisBuild := "com.hipstercoffee"
-
-version in ThisBuild := "0.4.1-SNAPSHOT"
 
 scalaVersion in ThisBuild := "2.10.4"
