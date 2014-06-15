@@ -6,7 +6,7 @@ import org.joda.money.{CurrencyUnit, Money}
 
 object BeansCatalogue {
   private val beans = Map(
-    "costa-rica-hacienda-sonora" -> Beans(
+    "catuai-red-honey" -> Beans(
       "catuai-red-honey",
       "COSTA RICA Hacienda Sonora - Catuaí Red Honey",
       Availability.Immediately,
