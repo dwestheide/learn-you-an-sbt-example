@@ -1,6 +1,7 @@
 import Dependencies._
 
 import com.typesafe.sbt.SbtGit._
+import releasenotes._
 
 versionWithGit
 
@@ -40,6 +41,7 @@ lazy val root = project
   .dependsOn(web)
   .aggregate(application, web)
   .settings(Revolver.settings: _*)
+  .enablePlugins(ReleaseNotesPlugin)
 
 organization in ThisBuild := "com.hipstercoffee"
 
