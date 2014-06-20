@@ -16,4 +16,4 @@ The release notes functionality is implemented as an SBT autoplugin, and the sol
 
 The functionality of the plugin is not usable in a generic way, as it makes strong assumptions about the format of release tags and about Git commit messages for closed tickets. A real-world version would likely allow configuring these things, too, and fetch the actual ticket description from an issue tracker.
 
-To allow you to play around with this quickly, the release notes functionality is not a separate SBT project. Rather, the release notes auto plugin is simply part of the build project, under _project/src/main/scala/releasenotes_.
+To allow you to play around with this quickly, the release notes functionality is not a separate SBT project. Rather, the release notes auto plugin is simply part of the build project, under [project/src/main/scala/releasenotes](https://github.com/dwestheide/learn-you-an-sbt-example/tree/master/project/src/main/scala/releasenotes).
